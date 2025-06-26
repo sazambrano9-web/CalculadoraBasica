@@ -24,5 +24,12 @@
     <script type="module" src="./calculadora-basica.js"></script>
     <script src="./js/bootstrap.bundle.min.js"></script>
 
+    <script>
+        // Escuchar el evento personalizado emitido por el componente
+        document.querySelector('calculadora-basica').addEventListener('calculoCompletado', (evento) => {
+            console.log('Evento calculoCompletado recibido:', evento.detail);
+            alert(`Cálculo completado: ${evento.detail.numero1} ${evento.detail.operacionSimbolo} ${evento.detail.numero2} = ${evento.detail.resultadoFormateado}`);
+        });
+    </script>
 </body>
 </html>
