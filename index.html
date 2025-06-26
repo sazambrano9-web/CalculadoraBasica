@@ -3,25 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Calculadora Bácisa</title>
+    <title>Calculadora Básica</title>
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
     <style>
         body {
             display: flex;
             justify-content: center;
             align-items: center;
             min-height: 100vh;
-            background-color: #f0f2f5;
-            font-family: sans-serif;
-            margin: 0;
-
+            background-color: #f8f9fa;
+        }
+        calculadora-basica {
+            display: block; /* Importante para que el componente ocupe espacio */
         }
     </style>
-
 </head>
 <body>
-    
+    <calculadora-basica></calculadora-basica>
 
+    <script type="module" src="./calculadora-basica.js"></script>
+    <script src="./js/bootstrap.bundle.min.js"></script>
 
-    
 </body>
 </html>
