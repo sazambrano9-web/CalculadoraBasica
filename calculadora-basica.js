@@ -162,8 +162,8 @@ class CalculadoraBasica extends HTMLElement {
 
             // Añadir operación al historial
             const entradaHistorial = `${num1} ${simboloOperacion} ${num2} = ${resultadoFormateado}`;
-            this.historial.unshift(entradaHistorial); // Añadir al principio
-            if (this.historial.length > 5) { // Mantener las últimas 5 operaciones
+            this.historial.unshift(entradaHistorial);
+            if (this.historial.length > 5) { // últimas 5 operaciones
                 this.historial.pop();
             }
             this.actualizarHistorialPantalla();
@@ -177,7 +177,7 @@ class CalculadoraBasica extends HTMLElement {
                     operacionSimbolo: simboloOperacion,
                     resultado: resultado,
                     resultadoFormateado: resultadoFormateado,
-                    historial: this.historial // Opcionalmente, enviar todo el historial
+                    historial: this.historial // enviao de todo el historial
                 },
                 bubbles: true, // Permitir que el evento burbujee por el DOM
                 composed: true // Permitir que el evento cruce el límite del Shadow DOM
